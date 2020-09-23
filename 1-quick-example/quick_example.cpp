@@ -5,7 +5,7 @@ using namespace emscripten;
 float lerp(float a, float b, float t) {
     return (1 - t) * a + t * b;
 }
-c
+
 EMSCRIPTEN_BINDINGS(my_module) {
     function("lerp", &lerp);
 }
