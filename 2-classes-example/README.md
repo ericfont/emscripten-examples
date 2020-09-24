@@ -72,6 +72,7 @@
    <html>
   	 <script src="classes_example.js"></script>
      <script>
+      Module['onRuntimeInitialized'] = () => {
 		console.log('From classes-example: ');
 		var instance = new Module.MyClass(10, "hello");
 		console.log(instance);
@@ -84,6 +85,7 @@
 		var string = Module.MyClass.getStringFromInstance(instance);
 		console.log(string);
 		instance.delete();
+      }
      </script>
    </html>
    ```
